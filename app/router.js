@@ -12,6 +12,11 @@ Router.map(function() {
     this.route('new');
   });
   this.route('callback');
+  this.route('quiz', function() {
+    this.route('new');
+    this.route('id', {path: '/:id'});
+  });
+  this.route('err', {path: '/:code'});
 });
 
 export default Router;
